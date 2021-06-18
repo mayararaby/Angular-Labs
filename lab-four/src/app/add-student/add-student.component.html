@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-5 shadow p-4 mb-4 bg-white" style="width: 40vw; margin: auto;">
+                <div class="text-center">
+                    <table class="table table-hover text-center " style="background-color: #fff;width: 30vw; margin: auto; ">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of students ">
+                                <td>{{s.name}}</td>
+                                <td>{{s.age}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

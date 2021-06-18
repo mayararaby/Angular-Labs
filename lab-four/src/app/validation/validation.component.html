@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-5 shadow p-4 mb-4 bg-white" style="width: 40vw; margin: auto;">
+                <form [formGroup]="ourValidation">
+                    <h2 class="text-center">Registration</h2>
+                    <div class="card-body">
+                        <!-- ngModel -->
+                        <div class="form-group">
+                            <label for="usr">Name</label>
+                            <input [ngClass]="{'NotValid':!NameValid}" formControlName="name" id="n" type="text" class="form-control" placeholder="Enter student name">
+                        </div>
+                        <div class=" form-group ">
+                            <label for="pwd ">Age</label>
+                            <input *ngIf="AgeValid" formControlName="age" class="form-control" id="a" type="text">
+                            <input *ngIf="!AgeValid" style="border: 2px solid red;" formControlName="age" class="form-control" id="a" type="text">
+                        </div>
+                        <div class="text-center ">
+                            <button type="button " value="ADD" (click)="Check()" class="btn btn-info m-3 " style="background-color: #3498DB !important; border-color: #3498DB !important; ">Check</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

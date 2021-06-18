@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-5 shadow p-4 mb-4 bg-white" style="width: 40vw; margin: auto;">
+                <h2 class="text-center">Registration</h2>
+                <div class="card-body">
+                    <!-- ngModel -->
+                    <div class="form-group">
+                        <label for="usr">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter student name" [value]="name" (keyup)="getName($event)">
+                    </div>
+                    <div class=" form-group ">
+                        <label for="pwd ">Age</label>
+                        <input type="number " class="form-control " placeholder="Enter student age" [value]="age" (keyup)="getAge($event)">
+                    </div>
+                    <div class="text-center ">
+                        <button type="button " (click)="add() " class="btn btn-info m-3 " style="background-color: #3498DB !important; border-color: #3498DB !important; ">Add</button>
+                    </div>
+                    <div class="text-center">
+                        <div *ngIf="name =='' || name == null; else nameBlock">
+                            <div class="alert alert-danger m-3">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Not Valid Name!</strong>Please try again.
+                            </div>
+                        </div>
+                        <ng-template #nameBlock>
+                            <div *ngIf="name">
+                                <div class="alert alert-success m-3">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Valid Name!</strong> Well done.
+                                </div>
+                            </div>
+                        </ng-template>
+                        <div *ngIf="age>18 && age; else less18Block">
+                            <div class="alert alert-success m-3">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Valid age!</strong> Well done.
+                            </div>
+                        </div>
+                        <ng-template #less18Block>
+                            <div *ngIf="age">
+                                <div class="alert alert-danger m-3">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Not Valid age!</strong>Please try again.
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <table class="table table-hover text-center " style="background-color: #fff;width: 30vw; margin: auto; ">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let s of students ">
+                                <td> {{s.name}}
+
+                                </td>
+                                <td>{{s.age}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

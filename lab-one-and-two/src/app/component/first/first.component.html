@@ -1,0 +1,24 @@
+<input type="text" placeholder="Enter the value" [value]="inputValue" (keyup)="get($event)">
+<br> {{inputValue}}
+<br>
+<input type="button" value="Change to default" (click)="changeText()">
+<br>
+<br>
+<hr>
+<br>
+<br>
+<img [src]="img">
+<div class="btnGroup">
+    <button (click)="nextImage()">
+        Next
+    </button>
+    <button (click)="play()">
+        Play
+    </button>
+    <button (click)="stop()">
+        Stop
+    </button>
+    <button (click)="PreviousImage()">
+        Previous
+    </button>
+</div>

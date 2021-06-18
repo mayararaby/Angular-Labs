@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 mt-3 text-enter" style="margin: auto;">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <h3 class="text-center mt-3">
+                    Add New User
+                </h3>
+                <div class="card-body">
+                    <form class="form" (ngSubmit)="Add(name.value, email.value, phone.value, userName.value , site.value , city.value, street.value)">
+                        <div class="form-group m-2">
+                            <label>
+                                Name
+                            </label>
+                            <input type="text" class="form-control" placeholder="Name" #name>
+                        </div>
+                        <div class="form-group m-2">
+                            <label>
+                                User Email
+                            </label>
+                            <input type="text" class="form-control" placeholder="Email" #email>
+                        </div>
+                        <div class="form-group m-2">
+                            <label>
+                                User Phone
+                            </label>
+                            <input type="text" class="form-control" placeholder="Phone" #phone>
+                        </div>
+                        <div class="form-group m-2">
+                            <label>
+                                User Name
+                            </label>
+                            <input type="text" class="form-control" placeholder="username" #userName>
+                        </div>
+                        <div class="form-group m-2">
+                            <label>
+                                User Website
+                            </label>
+                            <input type="text" class="form-control" placeholder="site" #site>
+                        </div>
+                        <div class="form-group m-2">
+                            <label>
+                                User City
+                            </label>
+                            <input type="text" class="form-control" placeholder="city" #city>
+                        </div>
+                        <div class="form-group m-2">
+                            <label>
+                                User Street
+                            </label>
+                            <input type="text" class="form-control" placeholder="street" #street>
+                        </div>
+                        <div class="text-center mt-3">
+                            <input type="submit" value="ADD" class="btn btn-success">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+<form class="form" (ngSubmit)="Add(name.value, email.value, phone.value)">
+    <div class="form-group m-2">
+        <input type="text" placeholder="Name" #name>
+    </div>
+    <div class="form-group m-2">
+        <input type="text" placeholder="Email" #email>
+    </div>
+    <div class="form-group m-2">
+        <input type="text" placeholder="Phone" #phone>
+    </div>
+    <input type="submit" value="ADD" class="btn btn-success">
+</form> -->
+<!-- Add( name.value, email.value, phone.value, userName.value, site.value, city.value, street.value) -->

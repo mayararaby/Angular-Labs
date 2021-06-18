@@ -1,0 +1,16 @@
+<div class="container" *ngIf="user;else NoDataYet">
+    <div class="card mt-4 mb-4 shadow p-3 mb-5 bg-white rounded" style="width:400px; margin: auto;">
+        <img src="../../assets/profile.png" style="width: 100px; margin: auto;">
+        <div class="card-body">
+            <h4 class="card-title">Welcome {{user.name}}</h4>
+            <!-- <p class="card-text">User Name : {{user.username}}</p> -->
+            <p class="card-text">User Email : {{user.email}}</p>
+            <p class="card-text">User Address : {{user.address.street}} ST , {{user.address.city}} </p>
+            <p class="card-text">User Phone : {{user.phone}}</p>
+            <!-- <p class="card-text">User website : {{user.website}}</p> -->
+        </div>
+    </div>
+</div>
+<ng-template #NoDataYet>
+    <h1>Loading Data...</h1>
+</ng-template>

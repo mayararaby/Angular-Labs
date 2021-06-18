@@ -1,0 +1,32 @@
+img {
+    width: 20vw;
+    height: 30vh;
+    margin: auto;
+    display: flex;
+}
+
+.btnGroup {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: #48a5b7;
+    color: #fff;
+    border: 1px solid #48a5b7;
+    margin: 10px;
+}
+
+input[type="button"] {
+    width: 130px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: #48a5b7;
+    color: #fff;
+    border: 1px solid #48a5b7;
+}
